@@ -1,28 +1,26 @@
 ﻿using System;
+
+
 public class Test
 {
     public static void Main()
     {
-        Pokemon charmander = new Pokemon("Sparky","fire");
-        Console.WriteLine(charmander.getName());
+        Console.WriteLine("What name would you like to give to your Charmander?");
+
+        string name = Console.ReadLine();
+
+        Pokemon charmander = new Pokemon(name, "fire", "water");
+        charmander.showStats();
     }
 }
 
-class Pokemon
+class SetData
 {
-    public string name;
-    public string strength;
 
-    public Pokemon(string name, string strength)
-    {
-        this.name = name;
-        this.strength = strength;
-    }
+}
 
-    public string getName()
-    {
-        return name;
-    }
+class Moveset
+{
 
 
 }
