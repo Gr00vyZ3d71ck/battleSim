@@ -1,26 +1,24 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 
-public class Test
+
+class Test 
 {
-    public static void Main()
+    static void Main()
     {
-        Console.WriteLine("What name would you like to give to your Charmander?");
+        Pokemon charmander = new Pokemon("charmander", "fire", "water");
 
-        string name = Console.ReadLine();
+        // 2. The player gives a name to a charmander.
+        charmander.rename();
 
-        Pokemon charmander = new Pokemon(name, "fire", "water");
-        charmander.showStats();
+        // 3. The charmander does its battle cry for ten times.
+        charmander.battleCry();
+
+        // 4. The player can give a new name to the same charmander.
+        charmander.rename();
+
+        // 5. The charmander does its battle cry for ten times.
+        charmander.battleCry();
     }
-}
-
-class SetData
-{
-
-}
-
-class Moveset
-{
-
-
 }
