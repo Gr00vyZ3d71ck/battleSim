@@ -13,11 +13,9 @@ class Pokemon
         this.weakness = weakness;
     }
 
-
-
     public void rename()
     {
-        Console.WriteLine($"Rename your {this.name}");
+        Console.WriteLine($"Rename your {this.pokemon} ({this.name})");
         this.name = Console.ReadLine();
     }
     
