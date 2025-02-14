@@ -1,1 +1,11 @@
-Hello World!
+Why would you want to write you code in a object-oriented programming language?
+OOP offers a structured programming style, it is fast, efficient and easy to execute and helps to keep the code DRY
+
+
+What's the difference between a class and an object?
+A class is used as a blueprint for objects, example: If you have a class called Pokemon, A Pokemon class can have a Name, Strength, Weakness and a experience level
+With this blueprint you can create new Pokemon with the required fields in the class.
+
+
+pseudo:
+1. 

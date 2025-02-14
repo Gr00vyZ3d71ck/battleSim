@@ -1,11 +1,12 @@
 class Pokemon
 {
-    private string name;
-    private string pokemon;
-    private string type;
-    private string weakness;
- 
-    public Pokemon(string name, string type, string weakness)
+    public string name;
+    public string pokemon;
+    public string type;
+    public string weakness;
+
+
+    public Pokemon(string name,string type,string weakness)
     {
         this.pokemon = name;
         this.name = name;
@@ -26,21 +27,15 @@ class Pokemon
             Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
         }
     }
-
-    public string gettype()
-    {
-        return this.type;
-    }
-
     public string getName()
     {
         return this.name;
     }
 
-    public void showStats()
-    {
-        Console.WriteLine($"Name: {this.name}");
-        Console.WriteLine($"Type: {this.type}");
-        Console.WriteLine($"Weakness: {this.weakness}");
-    }
+    //public void showStats()
+    //{
+    //    Console.WriteLine($"Name: {this.name}");
+    //    Console.WriteLine($"Type: {this.type}");
+    //    Console.WriteLine($"Weakness: {this.weakness}");
+    //}
 }
