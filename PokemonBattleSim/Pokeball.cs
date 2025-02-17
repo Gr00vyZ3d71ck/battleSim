@@ -30,7 +30,10 @@ class Pokeball
         Console.WriteLine($"Come back {this.pokemonDetails.getName()}!");
     }
 
-    
+    public void battleCry()
+    {
+        Console.WriteLine($"{this.pokemonDetails.getName()} Says: {this.pokemonDetails.getName()}!");
+    }
 
 
 

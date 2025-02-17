@@ -6,31 +6,40 @@ class Test
 {
     static void Main()
     {
+        bool game = true;
         //2.The player gives a name to the first trainer.
+        while (game) 
+        { 
+            Trainer trainer = new Trainer("trainer1");
+            Trainer trainer2 = new Trainer("trainer2");
 
-        Trainer trainer = new Trainer("trainer1");
-        Trainer trainer2 = new Trainer("trainer2");
+            trainer.setTrainerName();
+            trainer2.setTrainerName();
 
-        trainer.setTrainerName();
-        trainer2.setTrainerName();
-
-        Pokemon charmander = new Pokemon("charmander","fire","water");
+            Pokemon charmander = new Pokemon("charmander","fire","water");
         
-        for (int i = 0; i < 6; i++)
-        {
-            trainer.AddToBelt(new Pokeball(charmander, true, true));
-            trainer2.AddToBelt(new Pokeball(charmander, true, true));
-        }
-        for (int currentTrainer = 0; currentTrainer < 6; currentTrainer++)
-        {
-            Console.WriteLine($"{trainer.name} throws a pokeball");
-            trainer.belt[currentTrainer].ThrowPokemon();
-            Console.WriteLine($"{trainer2.name} throws a pokeball");
-            trainer2.belt[currentTrainer].ThrowPokemon();
-            Console.WriteLine($"{trainer.name} recalls the pokemon");
-            trainer.belt[currentTrainer].RecallPokemon();
-            Console.WriteLine($"{trainer2.name} recalls the pokemon");
-            trainer2.belt[currentTrainer].RecallPokemon();
+            for (int i = 0; i < 6; i++)
+            {
+                trainer.AddToBelt(new Pokeball(charmander, true, true));
+                trainer2.AddToBelt(new Pokeball(charmander, true, true));
+            }
+            for (int currentTrainer = 0; currentTrainer < 6; currentTrainer++)
+            {
+                Console.WriteLine(currentTrainer);
+                Console.WriteLine($"{trainer.name} throws a pokeball");
+                trainer.belt[currentTrainer].ThrowPokemon();
+                trainer.belt[currentTrainer].battleCry();
+                Console.WriteLine($"{trainer2.name} throws a pokeball");
+                trainer2.belt[currentTrainer].ThrowPokemon();
+                trainer.belt[currentTrainer].battleCry();
+                Console.WriteLine($"{trainer.name} recalls the pokemon");
+                trainer.belt[currentTrainer].RecallPokemon();
+                Console.WriteLine($"{trainer2.name} recalls the pokemon");
+                trainer2.belt[currentTrainer].RecallPokemon();
+            }
+
+            game = Pokemon.continueGame();
+
         }
 
 

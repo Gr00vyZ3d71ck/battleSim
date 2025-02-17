@@ -4,6 +4,7 @@ class Pokemon
     public string pokemon;
     public string type;
     public string weakness;
+    public string answer;
 
 
     public Pokemon(string name,string type,string weakness)
@@ -20,17 +21,32 @@ class Pokemon
         this.name = Console.ReadLine();
     }
     
-    public void battleCry()
-    {
-        for (int i = 0; i < 11; i++)
-        {
-            Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
-        }
-    }
+    
     public string getName()
     {
         return this.name;
     }
+
+    public static bool continueGame()
+    {
+        Console.WriteLine("Do you want to have another battle? Y/N");
+        string answer = Console.ReadLine().ToUpper() ;
+        return answer != "N";
+    }
+
+
+    //Opdracht 1:
+    //public void battleCry()
+    //{
+    //    for (int i = 0; i < 11; i++)
+    //    {
+    //        Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
+    //    }
+    //}
+    //public void battleCry()
+    //{
+    //    Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
+    //}
 
     //public void showStats()
     //{
