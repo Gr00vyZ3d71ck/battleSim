@@ -1,10 +1,10 @@
-class Pokemon
+abstract class Pokemon
 {
     public string name;
     public string pokemon;
     public string type;
     public string weakness;
-    public string answer;
+    
 
 
     public Pokemon(string name,string type,string weakness)
@@ -20,8 +20,10 @@ class Pokemon
         Console.WriteLine($"Rename your {this.pokemon} ({this.name})");
         this.name = Console.ReadLine();
     }
-    
-    
+
+    public abstract void battleCry(); 
+
+
     public string getName()
     {
         return this.name;
@@ -30,7 +32,7 @@ class Pokemon
     public static bool continueGame()
     {
         Console.WriteLine("Do you want to have another battle? Y/N");
-        string answer = Console.ReadLine().ToUpper() ;
+        string answer = Console.ReadLine().ToUpper();
         return answer != "N";
     }
 

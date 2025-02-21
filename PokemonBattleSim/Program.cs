@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.CompilerServices;
-class Test 
+using System.Runtime.Intrinsics.X86;
+class Program 
 {
     static void Main()
     {
@@ -16,36 +17,44 @@ class Test
             trainer.setTrainerName();
             trainer2.setTrainerName();
 
-            Pokemon charmander = new Pokemon("charmander","fire","water");
-        
-            for (int i = 0; i < 6; i++)
-            {
+            Charmander charmander = new Charmander("Charmander");
+            Bulbasaur bulbasaur = new Bulbasaur("Bulbasaur");
+            Squirtle squirtle = new Squirtle("Squirtle");
+
+            
+            for (int charm = 0; charm < 2; charm++)
+            { 
                 trainer.AddToBelt(new Pokeball(charmander, true, true));
                 trainer2.AddToBelt(new Pokeball(charmander, true, true));
             }
-            for (int currentTrainer = 0; currentTrainer < 6; currentTrainer++)
+            for (int bulb = 0; bulb < 2; bulb++)
             {
-                Console.WriteLine(currentTrainer);
-                Console.WriteLine($"{trainer.name} throws a pokeball");
-                trainer.belt[currentTrainer].ThrowPokemon();
-                trainer.belt[currentTrainer].battleCry();
-                Console.WriteLine($"{trainer2.name} throws a pokeball");
-                trainer2.belt[currentTrainer].ThrowPokemon();
-                trainer.belt[currentTrainer].battleCry();
-                Console.WriteLine($"{trainer.name} recalls the pokemon");
-                trainer.belt[currentTrainer].RecallPokemon();
-                Console.WriteLine($"{trainer2.name} recalls the pokemon");
-                trainer2.belt[currentTrainer].RecallPokemon();
+                trainer.AddToBelt(new Pokeball(bulbasaur, true, true)); 
+                trainer2.AddToBelt(new Pokeball(bulbasaur, true, true));
             }
-
+            for (int squirt = 0; squirt < 2; squirt++)
+            {
+                trainer.AddToBelt(new Pokeball(squirtle, true, true));
+                trainer2.AddToBelt(new Pokeball(squirtle, true, true));
+            }
+            
+            for (int ballNumber = 0; ballNumber < 6; ballNumber++)
+            {
+                //Pokemon beestje = trainer.throwPokeball();
+                trainer.belt[ballNumber].ThrowPokemon(trainer.name);
+                trainer.belt[ballNumber].pokemonDetails.battleCry(); 
+                trainer2.belt[ballNumber].ThrowPokemon(trainer2.name);
+                trainer.belt[ballNumber].pokemonDetails.battleCry();
+                trainer.belt[ballNumber].RecallPokemon(trainer.name);
+                trainer2.belt[ballNumber].RecallPokemon(trainer2.name);
+            }
             game = Pokemon.continueGame();
-
         }
-
-
-
-
-
+        //
+        //There are restrictions to the Pokemon class and its subclasses:
+            //1. The subclasses must make use of the parent constructor of the Pokemon class.
+            //2. The battle cry must be an abstract method in the Pokemon class.
+            //check pokemon class 
 
 
 

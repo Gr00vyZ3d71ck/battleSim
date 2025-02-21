@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 
-class Pokeball
+class Pokeball 
 {
-    private Pokemon pokemonDetails;
+    public Pokemon pokemonDetails;
     private bool isClosed = true;
     private bool containsPokemon = true;
 
@@ -18,24 +18,20 @@ class Pokeball
         this.containsPokemon = containsPokemon;
     }
 
+    // open
 
-    public void ThrowPokemon()
+    public void ThrowPokemon(string trainerName)
     {
         this.isClosed = false;
+        Console.WriteLine($"{trainerName} throws a pokeball");
         Console.WriteLine($"Go {this.pokemonDetails.getName()}!");
     }
-    public void RecallPokemon()
+    public void RecallPokemon(string trainerName)
     {
         this.isClosed = true;
+        Console.WriteLine($"{trainerName} recalls the pokemon");
         Console.WriteLine($"Come back {this.pokemonDetails.getName()}!");
     }
-
-    public void battleCry()
-    {
-        Console.WriteLine($"{this.pokemonDetails.getName()} Says: {this.pokemonDetails.getName()}!");
-    }
-
-
 
     public void ShowPokemon()
     {

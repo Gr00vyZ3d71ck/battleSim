@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 class Trainer
 {
     public string name;
-    public string pokemon;
+    
     public List<Pokeball> belt = new List<Pokeball>();
 
 
@@ -30,7 +30,7 @@ class Trainer
         }
     }
 
-
+     // throwPokeball
     public void setTrainerName()
     {
         try
@@ -44,13 +44,7 @@ class Trainer
         }
     }
 
-    
 
-    //public List<Pokeball> setBelt()
-    //{
-    //    setBelt test = new 
-    //}
-    
 
 
 
