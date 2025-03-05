@@ -40,23 +40,16 @@ class Program
             
             for (int ballNumber = 0; ballNumber < 6; ballNumber++)
             {
-                //Pokemon beestje = trainer.throwPokeball();
-                trainer.belt[ballNumber].ThrowPokemon(trainer.name);
-                trainer.belt[ballNumber].pokemonDetails.battleCry(); 
-                trainer2.belt[ballNumber].ThrowPokemon(trainer2.name);
+                //Pokemon beestje = Trainer.ThrowPokeball(trainer.name,trainer.belt[ballNumber]);
+                trainer.ThrowPokeball(trainer.name, trainer.belt[ballNumber]);
                 trainer.belt[ballNumber].pokemonDetails.battleCry();
-                trainer.belt[ballNumber].RecallPokemon(trainer.name);
-                trainer2.belt[ballNumber].RecallPokemon(trainer2.name);
+                //trainer2.belt[ballNumber].ThrowPokeball(trainer2.name);
+                //trainer.belt[ballNumber].pokemonDetails.battleCry();
+                //trainer.belt[ballNumber].RecallPokemon(trainer.name);
+                //trainer2.belt[ballNumber].RecallPokemon(trainer2.name);
             }
             game = Pokemon.continueGame();
         }
-        //
-        //There are restrictions to the Pokemon class and its subclasses:
-            //1. The subclasses must make use of the parent constructor of the Pokemon class.
-            //2. The battle cry must be an abstract method in the Pokemon class.
-            //check pokemon class 
-
-
 
 
 

@@ -16,7 +16,7 @@ class Charmander : Pokemon
 
     public override void battleCry()
     {
-        Console.WriteLine($"{name} roept: Charmander, {name}!");
+        Console.WriteLine($"{name} roept: {name}!");
     }
 }
 

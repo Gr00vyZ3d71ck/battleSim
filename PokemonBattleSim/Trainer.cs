@@ -30,7 +30,20 @@ class Trainer
         }
     }
 
-     // throwPokeball
+    public void ThrowPokeball(string trainerName,Pokeball ball)
+    {
+        Console.WriteLine($"{trainerName} sends out {ball.pokemonDetails.name}");
+        Console.WriteLine($"Go {ball.pokemonDetails.getName()}!");
+        ball.OpenPokeball();
+    }
+    public void RecallPokemon(string trainerName, Pokeball ball)
+    {
+        Console.WriteLine($"{trainerName} recalls the pokemon");
+        Console.WriteLine($"Come back {ball.pokemonDetails.getName()}!");
+        ball.ClosePokeball();
+    }
+
+    
     public void setTrainerName()
     {
         try

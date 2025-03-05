@@ -20,19 +20,14 @@ class Pokeball
 
     // open
 
-    public void ThrowPokemon(string trainerName)
+    public void ClosePokeball()
     {
         this.isClosed = false;
-        Console.WriteLine($"{trainerName} throws a pokeball");
-        Console.WriteLine($"Go {this.pokemonDetails.getName()}!");
     }
-    public void RecallPokemon(string trainerName)
+    public void OpenPokeball()
     {
         this.isClosed = true;
-        Console.WriteLine($"{trainerName} recalls the pokemon");
-        Console.WriteLine($"Come back {this.pokemonDetails.getName()}!");
     }
-
     public void ShowPokemon()
     {
         Console.WriteLine($"Pokemon: {this.pokemonDetails.getName()}");
