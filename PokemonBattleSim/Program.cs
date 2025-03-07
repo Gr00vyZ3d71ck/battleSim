@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.X86;
-class Program 
+class Program
 {
     static void Main()
     {
         bool game = true;
         //2.The player gives a name to the first trainer.
-        while (game) 
-        { 
+        while (game)
+        {
             Trainer trainer = new Trainer("trainer1");
             Trainer trainer2 = new Trainer("trainer2");
 
@@ -21,15 +21,15 @@ class Program
             Bulbasaur bulbasaur = new Bulbasaur("Bulbasaur");
             Squirtle squirtle = new Squirtle("Squirtle");
 
-            
+
             for (int charm = 0; charm < 2; charm++)
-            { 
+            {
                 trainer.AddToBelt(new Pokeball(charmander, true, true));
                 trainer2.AddToBelt(new Pokeball(charmander, true, true));
             }
             for (int bulb = 0; bulb < 2; bulb++)
             {
-                trainer.AddToBelt(new Pokeball(bulbasaur, true, true)); 
+                trainer.AddToBelt(new Pokeball(bulbasaur, true, true));
                 trainer2.AddToBelt(new Pokeball(bulbasaur, true, true));
             }
             for (int squirt = 0; squirt < 2; squirt++)
@@ -37,19 +37,26 @@ class Program
                 trainer.AddToBelt(new Pokeball(squirtle, true, true));
                 trainer2.AddToBelt(new Pokeball(squirtle, true, true));
             }
-            
+
+
+
             for (int ballNumber = 0; ballNumber < 6; ballNumber++)
             {
                 //Pokemon beestje = Trainer.ThrowPokeball(trainer.name,trainer.belt[ballNumber]);
+
                 trainer.ThrowPokeball(trainer.name, trainer.belt[ballNumber]);
                 trainer.belt[ballNumber].pokemonDetails.battleCry();
-                //trainer2.belt[ballNumber].ThrowPokeball(trainer2.name);
-                //trainer.belt[ballNumber].pokemonDetails.battleCry();
-                //trainer.belt[ballNumber].RecallPokemon(trainer.name);
-                //trainer2.belt[ballNumber].RecallPokemon(trainer2.name);
+                trainer.ThrowPokeball(trainer2.name, trainer2.belt[ballNumber]);
+                trainer2.belt[ballNumber].pokemonDetails.battleCry();
+
+                trainer.RecallPokemon(trainer.name, trainer.belt[ballNumber]);
+                trainer2.RecallPokemon(trainer2.name, trainer2.belt[ballNumber]);
+
+
             }
             game = Pokemon.continueGame();
         }
+
 
 
 

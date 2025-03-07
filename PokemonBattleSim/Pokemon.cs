@@ -4,10 +4,10 @@ abstract class Pokemon
     public string pokemon;
     public string type;
     public string weakness;
-    
 
 
-    public Pokemon(string name,string type,string weakness)
+
+    public Pokemon(string name, string type, string weakness)
     {
         this.pokemon = name;
         this.name = name;
@@ -21,7 +21,7 @@ abstract class Pokemon
         this.name = Console.ReadLine();
     }
 
-    public abstract void battleCry(); 
+    public abstract void battleCry();
 
 
     public string getName()
@@ -35,25 +35,25 @@ abstract class Pokemon
         string answer = Console.ReadLine().ToUpper();
         return answer != "N";
     }
-
-
-    //Opdracht 1:
-    //public void battleCry()
-    //{
-    //    for (int i = 0; i < 11; i++)
-    //    {
-    //        Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
-    //    }
-    //}
-    //public void battleCry()
-    //{
-    //    Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
-    //}
-
-    //public void showStats()
-    //{
-    //    Console.WriteLine($"Name: {this.name}");
-    //    Console.WriteLine($"Type: {this.type}");
-    //    Console.WriteLine($"Weakness: {this.weakness}");
-    //}
 }
+
+
+//Opdracht 1:
+//public void battleCry()
+//{
+//    for (int i = 0; i < 11; i++)
+//    {
+//        Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
+//    }
+//}
+//public void battleCry()
+//{
+//    Console.WriteLine($"{this.pokemon} Says: '{this.name}'");
+//}
+
+//public void showStats()
+//{
+//    Console.WriteLine($"Name: {this.name}");
+//    Console.WriteLine($"Type: {this.type}");
+//    Console.WriteLine($"Weakness: {this.weakness}");
+//}

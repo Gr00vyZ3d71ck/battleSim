@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 class Trainer
 {
     public string name;
-    
+
     public List<Pokeball> belt = new List<Pokeball>();
 
 
@@ -19,7 +19,14 @@ class Trainer
 
     public void AddToBelt(Pokeball ball)
     {
-        this.belt.Add(ball);
+        if (belt.Count < 6)
+        {
+            this.belt.Add(ball);
+        }
+        else
+        {
+            Console.WriteLine("Je belt mag niet meer dan 6 pokemon bevatten");
+        }
     }
 
     public void ShowBelt()
@@ -30,7 +37,7 @@ class Trainer
         }
     }
 
-    public void ThrowPokeball(string trainerName,Pokeball ball)
+    public void ThrowPokeball(string trainerName, Pokeball ball)
     {
         Console.WriteLine($"{trainerName} sends out {ball.pokemonDetails.name}");
         Console.WriteLine($"Go {ball.pokemonDetails.getName()}!");
@@ -38,12 +45,12 @@ class Trainer
     }
     public void RecallPokemon(string trainerName, Pokeball ball)
     {
-        Console.WriteLine($"{trainerName} recalls the pokemon");
+        Console.WriteLine($"{trainerName} recalls {ball.pokemonDetails.name}");
         Console.WriteLine($"Come back {ball.pokemonDetails.getName()}!");
         ball.ClosePokeball();
     }
 
-    
+
     public void setTrainerName()
     {
         try
@@ -56,10 +63,5 @@ class Trainer
             Console.WriteLine(e.Message);
         }
     }
-
-
-
-
-
 }
 

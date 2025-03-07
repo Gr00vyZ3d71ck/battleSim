@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 
-class Pokeball 
+class Pokeball
 {
-    public Pokemon pokemonDetails;
-    private bool isClosed = true;
-    private bool containsPokemon = true;
+    public Pokemon pokemonDetails;//ball
+    private bool isClosed = true;//bool voor closed of open
+    private bool containsPokemon = true;//of de ball leeg is of niet
 
     public Pokeball(Pokemon pokemonDetails, bool isClosed, bool containsPokemon)
     {
@@ -22,11 +22,12 @@ class Pokeball
 
     public void ClosePokeball()
     {
-        this.isClosed = false;
-    }
-    public void OpenPokeball()
-    {
         this.isClosed = true;
+    }
+    public Pokemon OpenPokeball() //hier nog naar kijken!! nog pokemondetails returnen zonder parameter -5/3/2025
+    {
+        this.isClosed = false;
+        return this.pokemonDetails;
     }
     public void ShowPokemon()
     {
