@@ -1,0 +1,15 @@
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.GeneratedMSBuildEditorConfig.editorconfig
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.AssemblyInfoInputs.cache
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.AssemblyInfo.cs
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.csproj.CoreCompileInputs.cache
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.sourcelink.json
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\bin\Debug\net9.0\BattlesimV003.exe
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\bin\Debug\net9.0\BattlesimV003.deps.json
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\bin\Debug\net9.0\BattlesimV003.runtimeconfig.json
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\bin\Debug\net9.0\BattlesimV003.dll
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\bin\Debug\net9.0\BattlesimV003.pdb
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.dll
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\refint\BattlesimV003.dll
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.pdb
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\BattlesimV003.genruntimeconfig.cache
+c:\School\Code\Repositories\Bootcamp\Extra opdrachten\BattlesimV003\obj\Debug\net9.0\ref\BattlesimV003.dll
