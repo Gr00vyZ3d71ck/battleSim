@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 class Trainer
 {
     public string name;
-
     public List<Pokeball> belt = new List<Pokeball>();
+    Random random = new Random();
+    public bool lastMatchWon = false;
 
 
     public Trainer(string name)
     {
         this.name = name;
         this.belt = new List<Pokeball>();
+        this.lastMatchWon = false;
     }
 
     public void AddToBelt(Pokeball ball)
@@ -42,6 +44,19 @@ class Trainer
         Console.WriteLine($"{trainerName} sends out {ball.pokemonDetails.name}");
         Console.WriteLine($"Go {ball.pokemonDetails.getName()}!");
         ball.OpenPokeball();
+    }
+
+    public Pokeball GrabFromBelt()
+    {
+        while (true)
+        {
+            int randomNumber = random.Next(0, 5);
+
+            if (this.belt[randomNumber].pokemonDetails.isFainted == false)
+            {
+                return this.belt[randomNumber];
+            }
+        }
     }
     public void RecallPokemon(string trainerName, Pokeball ball)
     {

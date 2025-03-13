@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.X86;
+using System.Security.Cryptography.X509Certificates;
 class Program
 {
     static void Main()
@@ -13,6 +14,7 @@ class Program
         {
             Trainer trainer = new Trainer("trainer1");
             Trainer trainer2 = new Trainer("trainer2");
+
 
             trainer.setTrainerName();
             trainer2.setTrainerName();
@@ -37,7 +39,8 @@ class Program
                 trainer2.AddToBelt(new Pokeball(squirtle, true, true));
             }
 
-
+            Arena TheArena = new Arena(trainer, trainer2);
+            TheArena.InitiateBattle();
 
 
 
