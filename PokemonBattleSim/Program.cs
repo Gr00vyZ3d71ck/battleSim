@@ -19,28 +19,27 @@ class Program
             trainer.setTrainerName();
             trainer2.setTrainerName();
 
-            Charmander charmander = new Charmander("Charmander");
-            Bulbasaur bulbasaur = new Bulbasaur("Bulbasaur");
-            Squirtle squirtle = new Squirtle("Squirtle");
 
             for (int charm = 0; charm < 2; charm++)
             {
-                trainer.AddToBelt(new Pokeball(charmander, true, true));
-                trainer2.AddToBelt(new Pokeball(charmander, true, true));
+                trainer.AddToBelt(new Pokeball(new Charmander($"Charmander"), true, true));
+                trainer2.AddToBelt(new Pokeball(new Charmander($"Charmander"), true, true));
             }
             for (int bulb = 0; bulb < 2; bulb++)
             {
-                trainer.AddToBelt(new Pokeball(bulbasaur, true, true));
-                trainer2.AddToBelt(new Pokeball(bulbasaur, true, true));
+                trainer.AddToBelt(new Pokeball(new Bulbasaur($"Bulbasaur"), true, true));
+                trainer2.AddToBelt(new Pokeball(new Bulbasaur($"Bulbasaur"), true, true));
             }
             for (int squirt = 0; squirt < 2; squirt++)
             {
-                trainer.AddToBelt(new Pokeball(squirtle, true, true));
-                trainer2.AddToBelt(new Pokeball(squirtle, true, true));
+                trainer.AddToBelt(new Pokeball(new Squirtle($"Squirtle"), true, true));
+                trainer2.AddToBelt(new Pokeball(new Squirtle($"Squirtle"), true, true));
             }
+
 
             Arena TheArena = new Arena(trainer, trainer2);
             TheArena.InitiateBattle();
+            break;
 
 
 
