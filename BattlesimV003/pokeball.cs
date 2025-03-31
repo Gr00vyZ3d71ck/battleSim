@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +36,8 @@ class Pokeball
 
     public void ShowStats()
     {
-        Console.WriteLine($"Name: {pokemonDetails.name}, type: {pokemonDetails.type}, weakness: {pokemonDetails.weakness}");
+        // Console.WriteLine($"Name: {pokemonDetails.name}, type: {pokemonDetails.type}, weakness: {pokemonDetails.weakness}");
+        Console.WriteLine($"Name: {pokemonDetails.name}, status: {pokemonDetails.isFainted}");
     }
 }
 
